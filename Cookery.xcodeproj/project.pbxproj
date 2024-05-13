@@ -7,18 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97894F912BF26E8800E33FD8 /* CookeryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894F902BF26E8800E33FD8 /* CookeryApp.swift */; };
-		97894F932BF26E8800E33FD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894F922BF26E8800E33FD8 /* ContentView.swift */; };
+		97894F912BF26E8800E33FD8 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894F902BF26E8800E33FD8 /* Main.swift */; };
+		97894F932BF26E8800E33FD8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894F922BF26E8800E33FD8 /* App.swift */; };
 		97894F952BF26E8800E33FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97894F942BF26E8800E33FD8 /* Assets.xcassets */; };
 		97894F982BF26E8800E33FD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97894F972BF26E8800E33FD8 /* Preview Assets.xcassets */; };
+		97894FA02BF26EB300E33FD8 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 97894F9F2BF26EB300E33FD8 /* ComposableArchitecture */; };
+		97894FA32BF26ECF00E33FD8 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 97894FA22BF26ECF00E33FD8 /* AsyncAlgorithms */; };
+		97894FA62BF26EED00E33FD8 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = 97894FA52BF26EED00E33FD8 /* Tagged */; };
+		97894FA92BF26F1900E33FD8 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 97894FA82BF26F1900E33FD8 /* OpenAI */; };
+		97894FB02BF26F7F00E33FD8 /* recipe_00_step_01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97894FAB2BF26F7F00E33FD8 /* recipe_00_step_01.jpeg */; };
+		97894FB12BF26F7F00E33FD8 /* recipe_00_root_02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97894FAC2BF26F7F00E33FD8 /* recipe_00_root_02.jpeg */; };
+		97894FB22BF26F7F00E33FD8 /* recipe_00_root_01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97894FAD2BF26F7F00E33FD8 /* recipe_00_root_01.jpeg */; };
+		97894FB32BF26F7F00E33FD8 /* recipe_00_step_03.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97894FAE2BF26F7F00E33FD8 /* recipe_00_step_03.jpeg */; };
+		97894FB42BF26F7F00E33FD8 /* recipe_00_step_02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97894FAF2BF26F7F00E33FD8 /* recipe_00_step_02.jpeg */; };
+		97894FB62BF26F8800E33FD8 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FB52BF26F8800E33FD8 /* Recipe.swift */; };
+		97894FB82BF26F8D00E33FD8 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FB72BF26F8D00E33FD8 /* Photo.swift */; };
+		97894FBA2BF26F9500E33FD8 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FB92BF26F9500E33FD8 /* Secrets.swift */; };
+		97894FBC2BF26FA500E33FD8 /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FBB2BF26FA500E33FD8 /* OpenAIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		97894F8D2BF26E8800E33FD8 /* Cookery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cookery.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		97894F902BF26E8800E33FD8 /* CookeryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookeryApp.swift; sourceTree = "<group>"; };
-		97894F922BF26E8800E33FD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97894F902BF26E8800E33FD8 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		97894F922BF26E8800E33FD8 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		97894F942BF26E8800E33FD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97894F972BF26E8800E33FD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		97894FAB2BF26F7F00E33FD8 /* recipe_00_step_01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe_00_step_01.jpeg; sourceTree = "<group>"; };
+		97894FAC2BF26F7F00E33FD8 /* recipe_00_root_02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe_00_root_02.jpeg; sourceTree = "<group>"; };
+		97894FAD2BF26F7F00E33FD8 /* recipe_00_root_01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe_00_root_01.jpeg; sourceTree = "<group>"; };
+		97894FAE2BF26F7F00E33FD8 /* recipe_00_step_03.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe_00_step_03.jpeg; sourceTree = "<group>"; };
+		97894FAF2BF26F7F00E33FD8 /* recipe_00_step_02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe_00_step_02.jpeg; sourceTree = "<group>"; };
+		97894FB52BF26F8800E33FD8 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		97894FB72BF26F8D00E33FD8 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		97894FB92BF26F9500E33FD8 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		97894FBB2BF26FA500E33FD8 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +48,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97894FA62BF26EED00E33FD8 /* Tagged in Frameworks */,
+				97894FA02BF26EB300E33FD8 /* ComposableArchitecture in Frameworks */,
+				97894FA92BF26F1900E33FD8 /* OpenAI in Frameworks */,
+				97894FA32BF26ECF00E33FD8 /* AsyncAlgorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +77,13 @@
 		97894F8F2BF26E8800E33FD8 /* Cookery */ = {
 			isa = PBXGroup;
 			children = (
-				97894F902BF26E8800E33FD8 /* CookeryApp.swift */,
-				97894F922BF26E8800E33FD8 /* ContentView.swift */,
+				97894F902BF26E8800E33FD8 /* Main.swift */,
+				97894F922BF26E8800E33FD8 /* App.swift */,
+				97894FB72BF26F8D00E33FD8 /* Photo.swift */,
+				97894FB52BF26F8800E33FD8 /* Recipe.swift */,
+				97894FBD2BF26FAD00E33FD8 /* Dependencies */,
 				97894F942BF26E8800E33FD8 /* Assets.xcassets */,
+				97894FAA2BF26F7F00E33FD8 /* Images */,
 				97894F962BF26E8800E33FD8 /* Preview Content */,
 			);
 			path = Cookery;
@@ -65,6 +95,27 @@
 				97894F972BF26E8800E33FD8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97894FAA2BF26F7F00E33FD8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				97894FAB2BF26F7F00E33FD8 /* recipe_00_step_01.jpeg */,
+				97894FAC2BF26F7F00E33FD8 /* recipe_00_root_02.jpeg */,
+				97894FAD2BF26F7F00E33FD8 /* recipe_00_root_01.jpeg */,
+				97894FAE2BF26F7F00E33FD8 /* recipe_00_step_03.jpeg */,
+				97894FAF2BF26F7F00E33FD8 /* recipe_00_step_02.jpeg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		97894FBD2BF26FAD00E33FD8 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				97894FBB2BF26FA500E33FD8 /* OpenAIClient.swift */,
+				97894FB92BF26F9500E33FD8 /* Secrets.swift */,
+			);
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +134,12 @@
 			dependencies = (
 			);
 			name = Cookery;
+			packageProductDependencies = (
+				97894F9F2BF26EB300E33FD8 /* ComposableArchitecture */,
+				97894FA22BF26ECF00E33FD8 /* AsyncAlgorithms */,
+				97894FA52BF26EED00E33FD8 /* Tagged */,
+				97894FA82BF26F1900E33FD8 /* OpenAI */,
+			);
 			productName = Cookery;
 			productReference = 97894F8D2BF26E8800E33FD8 /* Cookery.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +168,12 @@
 				Base,
 			);
 			mainGroup = 97894F842BF26E8800E33FD8;
+			packageReferences = (
+				97894F9E2BF26EB300E33FD8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				97894FA12BF26ECF00E33FD8 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
+				97894FA42BF26EED00E33FD8 /* XCRemoteSwiftPackageReference "swift-tagged" */,
+				97894FA72BF26F1900E33FD8 /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = 97894F8E2BF26E8800E33FD8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +188,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97894FB32BF26F7F00E33FD8 /* recipe_00_step_03.jpeg in Resources */,
+				97894FB22BF26F7F00E33FD8 /* recipe_00_root_01.jpeg in Resources */,
 				97894F982BF26E8800E33FD8 /* Preview Assets.xcassets in Resources */,
+				97894FB42BF26F7F00E33FD8 /* recipe_00_step_02.jpeg in Resources */,
+				97894FB12BF26F7F00E33FD8 /* recipe_00_root_02.jpeg in Resources */,
+				97894FB02BF26F7F00E33FD8 /* recipe_00_step_01.jpeg in Resources */,
 				97894F952BF26E8800E33FD8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97894F932BF26E8800E33FD8 /* ContentView.swift in Sources */,
-				97894F912BF26E8800E33FD8 /* CookeryApp.swift in Sources */,
+				97894FB82BF26F8D00E33FD8 /* Photo.swift in Sources */,
+				97894FBA2BF26F9500E33FD8 /* Secrets.swift in Sources */,
+				97894FB62BF26F8800E33FD8 /* Recipe.swift in Sources */,
+				97894FBC2BF26FA500E33FD8 /* OpenAIClient.swift in Sources */,
+				97894F932BF26E8800E33FD8 /* App.swift in Sources */,
+				97894F912BF26E8800E33FD8 /* Main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +416,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		97894F9E2BF26EB300E33FD8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.4;
+			};
+		};
+		97894FA12BF26ECF00E33FD8 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		97894FA42BF26EED00E33FD8 /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-tagged";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.0;
+			};
+		};
+		97894FA72BF26F1900E33FD8 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		97894F9F2BF26EB300E33FD8 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97894F9E2BF26EB300E33FD8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		97894FA22BF26ECF00E33FD8 /* AsyncAlgorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97894FA12BF26ECF00E33FD8 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncAlgorithms;
+		};
+		97894FA52BF26EED00E33FD8 /* Tagged */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97894FA42BF26EED00E33FD8 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = Tagged;
+		};
+		97894FA82BF26F1900E33FD8 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97894FA72BF26F1900E33FD8 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 97894F852BF26E8800E33FD8 /* Project object */;
 }

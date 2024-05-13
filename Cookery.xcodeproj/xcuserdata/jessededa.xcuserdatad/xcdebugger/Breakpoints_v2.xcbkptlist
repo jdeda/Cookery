@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D3EFD20A-0C78-48C1-B4A4-7C14AD241FA9"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cookery/Dependencies/OpenAIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - f0b2eab661d11a5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1420">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - 6d0acd931ab1eced"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - 6d0acd931ab1ec4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - 38a6386c273876fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - 38a6386c27387658"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - 60ab4629fd03525e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - c496ed04de16c0fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - c496ed04de16c05d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - a89095e7b365ae5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - 6d0acd931ab1ecab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - 38a6386c273876bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "D9CDFF31-C35F-464A-8054-5270B1DA1CEA - c496ed04de16c0b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cookery/Dependencies/OpenAIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - 87e0ab1787ac28a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - 38a6386c2738769e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - 21c0430701a830a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - 21c0430701a8308a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - 60ab4629fd0352bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - 60ab4629fd035298"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - c496ed04de16c09b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - a89095e7b365aeb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - a89095e7b365ae9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - 739c2334e591f4cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "6F563476-A0EA-4CB8-AE56-0B4C9A14C292 - 87e0ab1787ac28a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A549C18-FADE-4381-804F-ADFD9AA215AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cookery/Dependencies/OpenAIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "5A549C18-FADE-4381-804F-ADFD9AA215AC - 87e0ab1787ac2f40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "5A549C18-FADE-4381-804F-ADFD9AA215AC - 759c0fb5839e6fba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "5A549C18-FADE-4381-804F-ADFD9AA215AC - f8614d86a0176342"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "5A549C18-FADE-4381-804F-ADFD9AA215AC - e722befe3f3ac543"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "5A549C18-FADE-4381-804F-ADFD9AA215AC - 87e0ab1787ac2f40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "5A549C18-FADE-4381-804F-ADFD9AA215AC - f8614d86a0176342"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "5A549C18-FADE-4381-804F-ADFD9AA215AC - e722befe3f3ac543"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 (inout IdentifiedCollections.IdentifiedArray&lt;Tagged.Tagged&lt;Cookery.Photo, Foundation.UUID&gt;, Cookery.Photo&gt;, OpenAI.ImagesResult.Image) async throws -&gt; () in closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cookery/Dependencies/OpenAIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - 190f365f774d3640"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - f0b2eab661d11af9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - 6d0acd931ab1eced"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - 38a6386c273876fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - 38a6386c273876fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - 21c0430701a830ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - 60ab4629fd0352fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - c496ed04de16c0fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - c496ed04de16c0fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - a89095e7b365aeff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - 38a6386c2738761a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "664">
+               </Location>
+               <Location
+                  uuid = "5E5CF30E-757C-468E-AA37-2269AF9F0DB2 - c496ed04de16c01f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 (Cookery.Recipe) async throws -&gt; Cookery.Recipe in closure #1 () -&gt; Cookery.OpenAIClient in variable initialization expression of static Cookery.OpenAIClient.live : Cookery.OpenAIClient"
+                  moduleName = "Cookery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessededa/Development/Swift/Apps_iOS/Cookery/Cookery/Dependencies/OpenAIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "660">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66014F5A-2AC4-4462-A461-A73F1E6E0992"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cookery/App.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
