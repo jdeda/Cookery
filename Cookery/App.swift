@@ -42,6 +42,7 @@ struct AppView: View {
       }
       .sheet(item: $store.scope(state: \.destination?.generateRecipePrompt, action: \.destination.generateRecipePrompt)) { store in
         GenerateRecipePromptView(store: store)
+          .presentationDetents([.fraction(0.50)])
       }
       .sheet(isPresented: $store.generatingInFlight) {
         NavigationStack {

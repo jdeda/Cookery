@@ -28,32 +28,22 @@ extension OpenAIClient {
         try await __generateRecipePhotos(recipe: recipe, openAI: openAI)
       },
       generateRecipe: { name, description in
-        let recipe = GeneratedRecipe(name: name, about: description, ingredients: [], steps: [])
-        guard let data = try? JSONEncoder().encode(recipe),
-              let json = String(data: data, encoding: .utf8)
-        else { throw OpenAIError.error("Failed to generate recipe.") }
-//        let message = """
-//        Please generate a recipe given the following information:
-//        - Do not number the steps
-//        - Make the about a couple sentences long
-//        - Make the steps a couple sentences long
-//        - Return the modified recipe JSON: \(json)
-//        """
-//        let message = """
-//        Please generate a recipe given the following JSON:
-//        - Do not number the steps
-//        - Make the about a couple sentences long
-//        - Make the steps a couple sentences long
-//        - Return the modified recipe JSON: \(json)
-//        """
-        let message = "Please generate a recipe given the following JSON: \(json)"
+        let json: String = {
+          let data = try! JSONEncoder().encode(GeneratedRecipe(name: name, about: description, ingredients: [], steps: []))
+          return String(data: data, encoding: .utf8)!
+        }()
+        
+        let message = """
+        Please modify the given recipe as JSON: \(json). \n
+        Please make sure every description is at least 1-2 sentences long, don't number the steps,
+        only have 3 steps max, and the last step should always be about enjoying the meal.
+        """
         let query = ChatQuery(messages: [.user(.init(content: .string(message)))], model: .gpt3_5Turbo)
-        guard let result = try? await openAI.chats(query: query).choices.first?.message.content?.string,
-              let data = result.data(using: .utf8),
-              let recipe = try? JSONDecoder().decode(GeneratedRecipe.self, from: data)
-        else { throw OpenAIError.error("Failed to generate recipe.") }
+        let result = try! await openAI.chats(query: query).choices.first?.message.content?.string
+              let data = result!.data(using: .utf8)!
+              let recipe = try! JSONDecoder().decode(GeneratedRecipe.self, from: data)
         let generatedRecipe = recipe.toRecipe()
-        return try await __generateRecipePhotos(recipe: generatedRecipe, openAI: openAI)
+        return try! await __generateRecipePhotos(recipe: generatedRecipe, openAI: openAI)
                 
         struct GeneratedRecipe: Codable {
           var name: String
@@ -86,6 +76,12 @@ extension OpenAIClient {
       }
     )
   }()
+}
+
+@Sendable
+private func __chat(message: String, openAI: OpenAI) async throws -> String {
+  let query = ChatQuery(messages: [.user(.init(content: .string(message)))], model: .gpt3_5Turbo)
+  return try! await openAI.chats(query: query).choices.first?.message.content?.string ?? ""
 }
 
 @Sendable
