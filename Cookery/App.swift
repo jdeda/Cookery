@@ -40,7 +40,10 @@ struct AppView: View {
           }
         }
       }
-      .sheet(item: $store.scope(state: \.destination?.generateRecipePrompt, action: \.destination.generateRecipePrompt)) { store in
+      .sheet(item: $store.scope(
+        state: \.destination?.generateRecipePrompt,
+        action: \.destination.generateRecipePrompt
+      )) { store in
         GenerateRecipePromptView(store: store)
           .presentationDetents([.fraction(0.50)])
       }
@@ -60,7 +63,6 @@ struct AppView: View {
       .navigationDestination(item: $store.scope(state: \.destination?.recipe, action: \.destination.recipe)) { store in
         RecipeView(store: store)
       }
-
     }
   }
 }
@@ -72,7 +74,6 @@ struct App {
   enum Destination {
     case recipe(Recipe)
     case generateRecipePrompt(GenerateRecipePrompt)
-    case generatingRecipe
   }
   
   @ObservableState
@@ -136,7 +137,7 @@ struct App {
         else { return .none }
         state.generatingInFlight = true
         return .run { send in
-          let recipe = try await openAIClient.generateRecipe(name: prompt.name, description: prompt.description)
+          let recipe = try! await openAIClient.generateRecipe(name: prompt.name, description: prompt.description)
           await send(.recieveGeneratedRecipe(recipe), animation: .default)
         }
         .cancellable(id: CancelID.cancel, cancelInFlight: true)

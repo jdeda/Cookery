@@ -109,7 +109,8 @@ private func __generateRecipePhotos(recipe: Database.Recipe, openAI: OpenAI) asy
     }
     return await group.reduce(into: .init()) { partial, next in
       let stepID = next.0
-      guard let stepPhoto = next.1 else { return }
+      guard let stepPhoto = next.1 
+      else { return }
       partial[stepID, default: stepPhoto] = stepPhoto
     }
   }

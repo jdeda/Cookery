@@ -8,12 +8,12 @@ struct GenerateRecipePromptView: View {
     NavigationStack {
       List {
         Text("Please enter a name and description to create your new recipe!")
-        TextField("Name", text: $store.name)
-        TextField("Description", text: $store.description)
+        TextField("Name", text: $store.name, axis: .vertical)
+        TextField("Description", text: $store.description, axis: .vertical)
       }
-      .navigationTitle("Generate Recipe")
-      .navigationBarTitleDisplayMode(.large)
       .listStyle(.plain)
+      .navigationTitle("Generate Recipe")
+      .navigationBarTitleDisplayMode(.inline)
       .toolbar {
         ToolbarItem(placement: .topBarLeading) {
           Button("Cancel") {
@@ -21,7 +21,7 @@ struct GenerateRecipePromptView: View {
           }
         }
         ToolbarItem(placement: .topBarTrailing) {
-          Button("Generate") {
+          Button("Create") {
             store.send(.generateButtonTapped, animation: .default)
           }
         }
