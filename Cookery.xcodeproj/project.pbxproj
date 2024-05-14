@@ -20,10 +20,13 @@
 		97894FB22BF26F7F00E33FD8 /* recipe_00_root_01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97894FAD2BF26F7F00E33FD8 /* recipe_00_root_01.jpeg */; };
 		97894FB32BF26F7F00E33FD8 /* recipe_00_step_03.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97894FAE2BF26F7F00E33FD8 /* recipe_00_step_03.jpeg */; };
 		97894FB42BF26F7F00E33FD8 /* recipe_00_step_02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97894FAF2BF26F7F00E33FD8 /* recipe_00_step_02.jpeg */; };
-		97894FB62BF26F8800E33FD8 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FB52BF26F8800E33FD8 /* Recipe.swift */; };
-		97894FB82BF26F8D00E33FD8 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FB72BF26F8D00E33FD8 /* Photo.swift */; };
+		97894FB62BF26F8800E33FD8 /* Model+Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FB52BF26F8800E33FD8 /* Model+Recipe.swift */; };
+		97894FB82BF26F8D00E33FD8 /* Model+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FB72BF26F8D00E33FD8 /* Model+Photo.swift */; };
 		97894FBA2BF26F9500E33FD8 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FB92BF26F9500E33FD8 /* Secrets.swift */; };
 		97894FBC2BF26FA500E33FD8 /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FBB2BF26FA500E33FD8 /* OpenAIClient.swift */; };
+		97894FC42BF2945400E33FD8 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FC32BF2945400E33FD8 /* Database.swift */; };
+		97894FC62BF2970B00E33FD8 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FC52BF2970B00E33FD8 /* Recipe.swift */; };
+		97894FC82BF29B7300E33FD8 /* GenerateRecipePrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97894FC72BF29B7300E33FD8 /* GenerateRecipePrompt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +40,13 @@
 		97894FAD2BF26F7F00E33FD8 /* recipe_00_root_01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe_00_root_01.jpeg; sourceTree = "<group>"; };
 		97894FAE2BF26F7F00E33FD8 /* recipe_00_step_03.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe_00_step_03.jpeg; sourceTree = "<group>"; };
 		97894FAF2BF26F7F00E33FD8 /* recipe_00_step_02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe_00_step_02.jpeg; sourceTree = "<group>"; };
-		97894FB52BF26F8800E33FD8 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		97894FB72BF26F8D00E33FD8 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		97894FB52BF26F8800E33FD8 /* Model+Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Recipe.swift"; sourceTree = "<group>"; };
+		97894FB72BF26F8D00E33FD8 /* Model+Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Photo.swift"; sourceTree = "<group>"; };
 		97894FB92BF26F9500E33FD8 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		97894FBB2BF26FA500E33FD8 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
+		97894FC32BF2945400E33FD8 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		97894FC52BF2970B00E33FD8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		97894FC72BF29B7300E33FD8 /* GenerateRecipePrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRecipePrompt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +85,8 @@
 			children = (
 				97894F902BF26E8800E33FD8 /* Main.swift */,
 				97894F922BF26E8800E33FD8 /* App.swift */,
-				97894FB72BF26F8D00E33FD8 /* Photo.swift */,
-				97894FB52BF26F8800E33FD8 /* Recipe.swift */,
+				97894FC72BF29B7300E33FD8 /* GenerateRecipePrompt.swift */,
+				97894FC52BF2970B00E33FD8 /* Recipe.swift */,
 				97894FBD2BF26FAD00E33FD8 /* Dependencies */,
 				97894F942BF26E8800E33FD8 /* Assets.xcassets */,
 				97894FAA2BF26F7F00E33FD8 /* Images */,
@@ -114,8 +120,19 @@
 			children = (
 				97894FBB2BF26FA500E33FD8 /* OpenAIClient.swift */,
 				97894FB92BF26F9500E33FD8 /* Secrets.swift */,
+				97894FC22BF2944000E33FD8 /* Database */,
 			);
 			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		97894FC22BF2944000E33FD8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				97894FC32BF2945400E33FD8 /* Database.swift */,
+				97894FB52BF26F8800E33FD8 /* Model+Recipe.swift */,
+				97894FB72BF26F8D00E33FD8 /* Model+Photo.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,12 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97894FB82BF26F8D00E33FD8 /* Photo.swift in Sources */,
+				97894FC82BF29B7300E33FD8 /* GenerateRecipePrompt.swift in Sources */,
+				97894FB82BF26F8D00E33FD8 /* Model+Photo.swift in Sources */,
 				97894FBA2BF26F9500E33FD8 /* Secrets.swift in Sources */,
-				97894FB62BF26F8800E33FD8 /* Recipe.swift in Sources */,
+				97894FB62BF26F8800E33FD8 /* Model+Recipe.swift in Sources */,
 				97894FBC2BF26FA500E33FD8 /* OpenAIClient.swift in Sources */,
 				97894F932BF26E8800E33FD8 /* App.swift in Sources */,
+				97894FC42BF2945400E33FD8 /* Database.swift in Sources */,
 				97894F912BF26E8800E33FD8 /* Main.swift in Sources */,
+				97894FC62BF2970B00E33FD8 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

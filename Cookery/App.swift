@@ -8,139 +8,143 @@ struct AppView: View {
   var body: some View {
     NavigationStack {
       List {
-        HStack {
-          Spacer()
-          PhotosView(photos: store.recipe.photos)
-            .frame(width: 350, height: 350)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
-          Spacer()
-        }
-        
-        Section("About") {
-          Text(store.recipe.about)
-        }
-        
-        Section("Ingredients") {
-          ForEach(store.recipe.ingredients) { ingredient in
-            Text(ingredient.description)
-          }
-        }
-        
-        Section("Steps") {
-          ForEach(store.recipe.steps) { step in
+        ForEach(store.recipes) { recipe in
+          HStack(alignment: .top) {
+            PhotosView(photos: .init(recipe.photos.prefix(1)))
+              .frame(width: 75, height: 75)
+              .clipShape(RoundedRectangle(cornerRadius: 12.5))
             VStack(alignment: .leading) {
-              HStack(alignment: .top) {
-                Text("\((store.recipe.steps.index(id: step.id) ?? 0) + 1)")
-                  .fontWeight(.bold)
-                Text(step.description)
-              }
-              HStack {
-                Spacer()
-                PhotosView(photos: step.photos)
-                  .frame(width: 350, height: 350)
-                  .clipShape(RoundedRectangle(cornerRadius: 15))
-                Spacer()
-              }
+              Text(recipe.name)
+                .font(.headline)
+                .fontWeight(.medium)
+                .lineLimit(1)
+              Text(recipe.about.description)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .lineLimit(2, reservesSpace: true)
+              Spacer()
             }
+          }
+          .listRowSeparator(.hidden, edges: .top)
+          .onTapGesture {
+            send(.recipeTapped(recipe.id), animation: .default)
           }
         }
       }
+      .navigationTitle("Recipes")
       .listStyle(.plain)
-      .navigationTitle(store.recipe.name)
       .toolbar {
         ToolbarItem(placement: .primaryAction) {
           Button("", systemImage: "wand.and.stars") {
             send(.magicButtonTapped, animation: .default)
           }
-          .disabled(store.fetchInFlight)
         }
       }
-      .sheet(isPresented: $store.fetchInFlight) {
+      .sheet(item: $store.scope(state: \.destination?.generateRecipePrompt, action: \.destination.generateRecipePrompt)) { store in
+        GenerateRecipePromptView(store: store)
+      }
+      .sheet(isPresented: $store.generatingInFlight) {
         NavigationStack {
-          ProgressView("Generating Images...")
+          ProgressView("Generating Recipe...")
             .toolbar {
               ToolbarItem(placement: .topBarLeading) {
                 Button("Cancel") {
-                  send(.cancelButtonTapped)
+                  send(.cancelGeneratingButtonTapped)
                 }
               }
             }
         }
         .presentationDetents([.fraction(0.50)])
       }
+      .navigationDestination(item: $store.scope(state: \.destination?.recipe, action: \.destination.recipe)) { store in
+        RecipeView(store: store)
+      }
+
     }
   }
 }
 
 @Reducer
 struct App {
+  
+  @Reducer(state: .equatable, action: .equatable)
+  enum Destination {
+    case recipe(Recipe)
+    case generateRecipePrompt(GenerateRecipePrompt)
+    case generatingRecipe
+  }
+  
   @ObservableState
   struct State: Equatable {
-    var recipe: Recipe = .mock
-    var fetchInFlight: Bool = true
+    var recipes: IdentifiedArrayOf<Database.Recipe> = [.mock]
+    @Presents var destination: Destination.State?
+    var generatingInFlight: Bool = false
   }
   
   enum Action: Equatable, ViewAction, BindableAction {
     case view(ViewAction)
     enum ViewAction: Equatable {
       case magicButtonTapped
-      case cancelButtonTapped
+      case cancelGeneratingButtonTapped
+      case recipeTapped(Database.Recipe.ID)
     }
     case binding(BindingAction<State>)
-    case recieveGeneratedRecipePhotos(Recipe)
+    case recieveGeneratedRecipe(Database.Recipe)
+    case navigateToRecipe(Database.Recipe.ID)
+    case destination(PresentationAction<Destination.Action>)
   }
   
   @Dependency(\.openAIClient) var openAIClient
-  
+  @Dependency(\.continuousClock) var clock
+
   enum CancelID: Hashable { case cancel }
   
   var body: some ReducerOf<Self> {
-    BindingReducer()
     Reduce { state, action in
       switch action {
       case .view(.magicButtonTapped):
-        state.fetchInFlight = true
-        return .run { [recipe = state.recipe] send in
-          let recipe = (try? await openAIClient.generateRecipePhotos(recipe)) ?? recipe
-          await send(.recieveGeneratedRecipePhotos(recipe), animation: .default)
+        state.destination = .generateRecipePrompt(.init())
+        return .none
+        
+      case .view(.cancelGeneratingButtonTapped):
+        state.generatingInFlight = false
+        return .cancel(id: CancelID.cancel)
+        
+      case let .view(.recipeTapped(id)):
+        guard let recipe = state.recipes[id: id]
+        else { return .none }
+        state.destination = .recipe(.init(recipe: recipe))
+        return .none
+        
+      case let .recieveGeneratedRecipe(recipe):
+        state.recipes.append(recipe)
+        state.generatingInFlight = false
+        return .run { [id = recipe.id] send in
+          try await clock.sleep(for: .seconds(1))
+          await send(.navigateToRecipe(id), animation: .default)
+        }
+      
+      case let .navigateToRecipe(id):
+        guard let recipe = state.recipes[id: id]
+        else { return .none }
+        state.destination = .recipe(.init(recipe: recipe))
+        return .none
+        
+      case .destination(.presented(.generateRecipePrompt(.generateButtonTapped))):
+        guard let prompt = state.destination?.generateRecipePrompt
+        else { return .none }
+        state.generatingInFlight = true
+        return .run { send in
+          let recipe = try await openAIClient.generateRecipe(name: prompt.name, description: prompt.description)
+          await send(.recieveGeneratedRecipe(recipe), animation: .default)
         }
         .cancellable(id: CancelID.cancel, cancelInFlight: true)
         
-      case .view(.cancelButtonTapped):
-        state.fetchInFlight = false
-        return .cancel(id: CancelID.cancel)
-        
-      case let .recieveGeneratedRecipePhotos(recipe):
-        state.fetchInFlight = false
-        state.recipe = recipe
-        return .none
-        
-      case .view, .binding:
+      case .view, .destination, .binding:
         return .none
       }
     }
-  }
-}
-
-struct PhotosView: View {
-  let photos: IdentifiedArrayOf<Photo>
-  @State private var selection: Photo.ID?
-  
-  var body: some View {
-    TabView(selection: $selection) {
-      ForEach(photos) { photo  in
-        Rectangle()
-          .fill(.clear)
-          .aspectRatio(1, contentMode: .fit)
-          .overlay(
-            photo.image
-              .resizable()
-          )
-          .tag(Optional(photo.id))
-      }
-    }
-    .tabViewStyle(.page)
-    .indexViewStyle(.page(backgroundDisplayMode: .always))
+    .ifLet(\.$destination, action: \.destination)
   }
 }
 

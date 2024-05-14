@@ -1,77 +1,169 @@
-import Foundation
-import Tagged
+import SwiftUI
 import ComposableArchitecture
 
-struct Recipe: Equatable, Identifiable, Codable {
-  let id: Tagged<Self, UUID>
-  var name: String = ""
-  var photos: IdentifiedArrayOf<Photo> = []
-  var about: String = ""
+@ViewAction(for: Recipe.self)
+struct RecipeView: View {
+  @Bindable var store: StoreOf<Recipe>
   
-  var ingredients: IdentifiedArrayOf<Ingredient> = []
-  struct Ingredient: Equatable, Identifiable, Codable {
-    let id: Tagged<Self, UUID>
-    var description: String = ""
-  }
-  
-  var steps: IdentifiedArrayOf<Step> = []
-  struct Step: Equatable, Identifiable, Codable {
-    let id: Tagged<Self, UUID>
-    var photos: IdentifiedArrayOf<Photo> = []
-    var description: String = ""
+  var body: some View {
+    NavigationStack {
+      List {
+        HStack {
+          Spacer()
+          PhotosView(photos: store.recipe.photos)
+            .frame(width: 350, height: 350)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+          Spacer()
+        }
+        
+        Section {
+          Text(store.recipe.about)
+        } header: {
+          Text("About")
+            .font(.title3)
+            .fontWeight(.bold)
+            .foregroundStyle(.black)
+        }
+        
+        Section {
+          ForEach(store.recipe.ingredients) { ingredient in
+            Text(ingredient.description)
+          }
+        } header: {
+          Text("Ingredients")
+            .font(.title3)
+            .fontWeight(.bold)
+            .foregroundStyle(.black)
+        }
+        
+        Section {
+          ForEach(store.recipe.steps) { step in
+            VStack(alignment: .leading) {
+              HStack(alignment: .top) {
+                Text("\((store.recipe.steps.index(id: step.id) ?? 0) + 1)")
+                  .fontWeight(.bold)
+                Text(step.description)
+              }
+              HStack {
+                Spacer()
+                PhotosView(photos: step.photos)
+                  .frame(width: 350, height: 350)
+                  .clipShape(RoundedRectangle(cornerRadius: 15))
+                Spacer()
+              }
+            }
+          }
+        } header: {
+          Text("About")
+            .font(.title3)
+            .fontWeight(.bold)
+            .foregroundStyle(.black)
+        }
+      }
+      .listStyle(.plain)
+      .navigationTitle(store.recipe.name)
+      .toolbar {
+        ToolbarItem(placement: .primaryAction) {
+          Button("", systemImage: "wand.and.stars") {
+            send(.magicButtonTapped, animation: .default)
+          }
+          .disabled(store.fetchInFlight)
+        }
+      }
+      .sheet(isPresented: $store.fetchInFlight) {
+        NavigationStack {
+          ProgressView("Generating Images...")
+            .toolbar {
+              ToolbarItem(placement: .topBarLeading) {
+                Button("Cancel") {
+                  send(.cancelButtonTapped)
+                }
+              }
+            }
+        }
+        .presentationDetents([.fraction(0.50)])
+      }
+    }
   }
 }
 
-extension Recipe {
-  static let empty = Recipe(id: .init())
+@Reducer
+struct Recipe {
+  @ObservableState
+  struct State: Equatable {
+    var recipe: Database.Recipe = .mock
+    var fetchInFlight: Bool = false
+  }
   
-  static let mock = Recipe(
-    id: .init(),
-    name: "Double Cheese Burger",
-    photos: [
-      .init(bundleJPEG: "recipe_00_root_01"),
-      .init(bundleJPEG: "recipe_00_root_02")
-    ],
-    about: """
-Who doesn't love a big fat juicy burger with that secret sauce. \
-This is a party pleaser and a guilty pleasure. \
-Join me in how to craft the perfect burger!
-""",
-    ingredients: [
-      .init(id: .init(), description: "Buns"),
-      .init(id: .init(), description: "Patties"),
-      .init(id: .init(), description: "Cheese"),
-      .init(id: .init(), description: "Secret Sauce"),
-      .init(id: .init(), description: "Toppings"),
-    ],
-    steps: [
-      .init(
-        id: .init(),
-        photos: [.init(bundleJPEG: "recipe_00_step_01")],
-        description: "Grill the patties up on the grill. Toast your buns too!"
-      ),
-      .init(
-        id: .init(),
-        photos: [.init(bundleJPEG: "recipe_00_step_02")],
-        description: "When your burgers are done, add a slice of cheese on top and cover them to steam and melt the cheese."
-      ),
-      .init(
-        id: .init(),
-        photos: [.init(bundleJPEG: "recipe_00_step_03")],
-        description: "Assembly your burger by layering a generous amount of your secret sauce, toppings, and stack as many patties as you like. Enjoy!"
-      )
-    ]
-  )
-}
-
-private extension Data {
-  init(bundleJPEG: String) {
-    try! self.init(contentsOf: Bundle.main.url(forResource: bundleJPEG, withExtension: "jpeg")!)
+  enum Action: Equatable, ViewAction, BindableAction {
+    case view(ViewAction)
+    enum ViewAction: Equatable {
+      case magicButtonTapped
+      case cancelButtonTapped
+    }
+    case binding(BindingAction<State>)
+    case recieveGeneratedRecipePhotos(Database.Recipe)
+  }
+  
+  @Dependency(\.openAIClient) var openAIClient
+  
+  enum CancelID: Hashable { case cancel }
+  
+  var body: some ReducerOf<Self> {
+    BindingReducer()
+    Reduce { state, action in
+      switch action {
+      case .view(.magicButtonTapped):
+        state.fetchInFlight = true
+        return .run { [recipe = state.recipe] send in
+          let recipe = (try? await openAIClient.generateRecipePhotos(recipe)) ?? recipe
+          await send(.recieveGeneratedRecipePhotos(recipe), animation: .default)
+        }
+        .cancellable(id: CancelID.cancel, cancelInFlight: true)
+        
+      case .view(.cancelButtonTapped):
+        state.fetchInFlight = false
+        return .cancel(id: CancelID.cancel)
+        
+      case let .recieveGeneratedRecipePhotos(recipe):
+        state.fetchInFlight = false
+        state.recipe = recipe
+        return .none
+        
+      case .view, .binding:
+        return .none
+      }
+    }
   }
 }
 
-private extension Photo {
-  init(bundleJPEG: String) {
-    self.init(id: .init(), data: .init(bundleJPEG: bundleJPEG))!
+struct PhotosView: View {
+  let photos: IdentifiedArrayOf<Database.Photo>
+  @State private var selection: Database.Photo.ID?
+  
+  var body: some View {
+    TabView(selection: $selection) {
+      ForEach(photos) { photo  in
+        Rectangle()
+          .fill(.clear)
+          .aspectRatio(1, contentMode: .fit)
+          .overlay(
+            photo.image
+              .resizable()
+          )
+          .tag(Optional(photo.id))
+      }
+    }
+    .tabViewStyle(.page)
+    .indexViewStyle(.page(backgroundDisplayMode: .always))
   }
 }
+
+#Preview {
+  RecipeView(store: .init(
+    initialState: Recipe.State.init(),
+    reducer: Recipe.init
+  ))
+}
+
+
